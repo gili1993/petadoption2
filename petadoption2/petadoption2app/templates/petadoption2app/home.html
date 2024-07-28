@@ -1,0 +1,89 @@
+{% extends 'petadoption2app/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-content">
+    <h1>Welcome to Pet Adoption Center</h1>
+    <p>At Pet Adoption Center, we believe every pet deserves a loving home. Our mission is to connect compassionate individuals and families with pets who are in need of a forever home. Whether you're looking for a playful puppy, a cuddly kitten, or an older pet with a calm demeanor, we have the perfect companion waiting for you.</p>
+    
+    <div class="feature-section">
+        <h2>Why Adopt from Us?</h2>
+        <ul>
+            <li><strong>Wide Selection:</strong> We have a variety of pets, including dogs, cats, rabbits, and more, each with unique personalities and needs.</li>
+            <li><strong>Health Assurance:</strong> All our pets are vaccinated, spayed/neutered, and undergo regular health check-ups.</li>
+            <li><strong>Support and Guidance:</strong> Our team provides ongoing support to ensure a smooth transition for you and your new pet.</li>
+            <li><strong>Community Focused:</strong> We are committed to building a community of responsible pet owners through education and outreach programs.</li>
+        </ul>
+    </div>
+    
+    <div class="cta-section">
+        <h2>How You Can Help</h2>
+        <p>Adoption is just one way to make a difference. Here are other ways you can help:</p>
+        <ul>
+            <li><a href="{% url 'volunteer' %}">Volunteer</a>: Join our team and help care for the animals, assist in events, or lend a hand in our daily operations.</li>
+            <li><a href="{% url 'donate' %}">Donate</a>: Your generous contributions help us provide food, medical care, and other necessities for our animals.</li>
+            <li><a href="{% url 'foster' %}">Foster</a>: Provide temporary care for animals in your home until they find their forever families.</li>
+        </ul>
+    </div>
+    
+    <div class="success-stories-section">
+        <h2>Success Stories</h2>
+        <p>Read heartwarming stories of our adopted pets and their new families:</p>
+        <ul>
+            <li><a href="{% url 'success_stories' %}#max">Max's Story</a>: From stray to cherished family member, read about Max's journey to his forever home.</li>
+            <li><a href="{% url 'success_stories' %}#bella">Bella's Story</a>: Discover how Bella found her perfect match with Lisa Brown.</li>
+            <li><a href="{% url 'success_stories' %}#charlie">Charlie's Story</a>: Learn about Charlie's transformation and the joy he brings to the Smith family.</li>
+        </ul>
+    </div>
+    
+    <div class="explore-section">
+        <h2>Explore More</h2>
+        <p>We invite you to explore our website to learn more about the adoption process, meet our available pets, and find resources for pet care. If you have any questions or need assistance, feel free to <a href="{% url 'contact' %}">contact us</a>.</p>
+    </div>
+</div>
+
+<style>
+    .home-content {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    }
+    .home-content h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+    .home-content p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .feature-section,
+    .cta-section,
+    .success-stories-section,
+    .explore-section {
+        margin-bottom: 40px;
+    }
+    .feature-section ul,
+    .cta-section ul,
+    .success-stories-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .feature-section li,
+    .cta-section li,
+    .success-stories-section li {
+        margin-bottom: 10px;
+    }
+    .cta-section a,
+    .success-stories-section a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    .cta-section a:hover,
+    .success-stories-section a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}

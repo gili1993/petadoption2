@@ -1,0 +1,77 @@
+{% extends 'petadoption2app/base.html' %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1>About Us</h1>
+    <p>Welcome to Pet Adoption Center. Our mission is to connect loving families with pets in need of a forever home.</p>
+    
+    <section class="our-mission">
+        <h2>Our Mission</h2>
+        <p>At Pet Adoption Center, we believe every pet deserves a loving and caring home. Our mission is to rescue, rehabilitate, and rehome pets, providing them with the care and compassion they need to thrive.</p>
+    </section>
+    
+    <section class="our-vision">
+        <h2>Our Vision</h2>
+        <p>We envision a world where every pet has a safe, loving, and permanent home. We strive to be a leader in animal welfare, advocating for the humane treatment of all animals.</p>
+    </section>
+    
+    <section class="our-history">
+        <h2>Our History</h2>
+        <p>Founded in 2000, Pet Adoption Center has helped thousands of pets find their forever homes. Our dedicated team of volunteers and staff work tirelessly to ensure each pet receives the best care possible.</p>
+    </section>
+    
+    <section class="our-team">
+        <h2>Meet Our Team</h2>
+        <p>Our team is made up of passionate animal lovers who are committed to making a difference. From our veterinarians to our adoption counselors, each member plays a vital role in our mission.</p>
+        <ul>
+            <li><strong>Gili Levy</strong> - Top Manager</li>
+            <li><strong>Dr. Emily Smith</strong> - Veterinarian</li>
+            <li><strong>John Doe</strong> - Adoption Counselor</li>
+            <li><strong>Jane Roe</strong> - Volunteer Coordinator</li>
+            <!-- Add more team members as needed -->
+        </ul>
+    </section>
+    
+    <section class="our-values">
+        <h2>Our Values</h2>
+        <ul>
+            <li><strong>Compassion:</strong> We treat every pet with love and kindness.</li>
+            <li><strong>Integrity:</strong> We act with honesty and transparency in all we do.</li>
+            <li><strong>Commitment:</strong> We are dedicated to improving the lives of pets and their families.</li>
+            <li><strong>Community:</strong> We work together with our community to achieve our mission.</li>
+        </ul>
+    </section>
+    
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to learn more about our organization, please <a href="{% url 'contact' %}">contact us</a>.</p>
+    </section>
+</div>
+
+<style>
+    .content-container {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .content-container h1, .content-container h2 {
+        color: #2c3e50;
+    }
+    .content-container p, .content-container ul {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .content-container ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .content-container li {
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'petadoption2app/base.html' %}
+{% load static %}
+
+{% block title %}Success Stories{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Success Stories</h1>
+    <p>Read heartwarming stories of our adopted pets and their new families.</p>
+    
+    <!-- Main Success Stories Image -->
+    <img src="{% static 'images/success_story_main.jpg' %}" alt="Success Stories" class="main-image">
+
+    <div class="stories-list">
+        {% for story in stories %}
+            <div class="story">
+                <h2>{{ story.title }}</h2>
+                <img src="{% static story.image %}" alt="{{ story.title }}" class="story-image">
+                <p>{{ story.content }}</p>
+                <p><strong>Author:</strong> {{ story.author }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .content-container {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .main-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+    .stories-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .story {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        background-color: #f9f9f9;
+    }
+    .story h2 {
+        margin-top: 0;
+    }
+    .story-image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+</style>
+{% endblock %}

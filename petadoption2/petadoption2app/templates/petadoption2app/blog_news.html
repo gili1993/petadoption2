@@ -1,0 +1,53 @@
+{% extends 'petadoption2app/base.html' %}
+{% load static %}
+
+{% block title %}Blog/News{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Blog/News</h1>
+    <p>Welcome to our blog! Here, you will find the latest news, updates, and stories from the Pet Adoption Center.</p>
+    
+    <div class="blog-posts">
+        {% for post in blog_posts %}
+            <div class="blog-post">
+                <h2>{{ post.title }}</h2>
+                <p><strong>Date:</strong> {{ post.date }}</p>
+                <p>{{ post.content }}</p>
+                <p><strong>Author:</strong> {{ post.author }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .content-container {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .content-container h1, .content-container h2 {
+        color: #2c3e50;
+    }
+    .content-container p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .blog-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .blog-post {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        background-color: #f9f9f9;
+    }
+    .blog-post h2 {
+        margin-top: 0;
+    }
+</style>
+{% endblock %}

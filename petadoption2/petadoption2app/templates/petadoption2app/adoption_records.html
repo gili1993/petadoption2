@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% extends 'petadoption2app/base.html' %}
+        {% load static %}
+        
+        {% block title %}Adoption Records{% endblock %}
+        
+        {% block content %}
+        <div class="content-container">
+            <h1>Adoption Records</h1>
+            
+            <section class="adoption-process">
+                <h2>Adoption Process</h2>
+                <p>Adopting a pet from our shelter is a straightforward and rewarding process. Here’s how you can adopt a pet:</p>
+                <ol>
+                    <li>Browse our list of available pets and select the one you are interested in.</li>
+                    <li>Fill out an adoption application form with your details.</li>
+                    <li>Our team will review your application and contact you for a brief interview.</li>
+                    <li>Once approved, you will be invited to meet your potential new pet.</li>
+                    <li>If everything goes well, you can take your new pet home!</li>
+                </ol>
+            </section>
+            
+            <section class="success-stories">
+                <h2>Success Stories</h2>
+                <p>We are proud to share some of the heartwarming success stories of pets who found their forever homes through our adoption program.</p>
+                <article class="story">
+                    <h3>Buddy's New Home</h3>
+                    <p>Buddy, a playful Labrador Retriever, found his forever home with the Smith family. He now enjoys long walks in the park and playing fetch with his new siblings.</p>
+                </article>
+                <article class="story">
+                    <h3>Whiskers' New Life</h3>
+                    <p>Whiskers, a shy but loving cat, was adopted by Emily, a first-time pet owner. Whiskers has become Emily’s constant companion, providing her with endless joy and companionship.</p>
+                </article>
+                <!-- Add more stories as needed -->
+            </section>
+            
+            <section class="records-table">
+                <h2>Search Adoption Records</h2>
+                <input type="text" id="search-input" placeholder="Search by pet name or adopter's name" onkeyup="searchRecords()">
+                
+                <table id="records-table">
+                    <thead>
+                        <tr>
+                            <th>Pet Name</th>
+                            <th>Species</th>
+                            <th>Breed</th>
+                            <th>Age</th>
+                            <th>Adopter's Name</th>
+                            <th>Adoption Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Buddy</td>
+                            <td>Dog</td>
+                            <td>Labrador Retriever</td>
+                            <td>2 years</td>
+                            <td>John Smith</td>
+                            <td>2024-01-15</td>
+                        </tr>
+                        <tr>
+                            <td>Whiskers</td>
+                            <td>Cat</td>
+                            <td>Domestic Shorthair</td>
+                            <td>3 years</td>
+                            <td>Emily Johnson</td>
+                            <td>2023-11-05</td>
+                        </tr>
+                        <!-- Add more records as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        
+        <script>
+        function searchRecords() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById('search-input');
+            filter = input.value.toUpperCase();
+            table = document.getElementById('records-table');
+            tr = table.getElementsByTagName('tr');
+            
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = 'none';
+                td = tr[i].getElementsByTagName('td');
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = '';
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        </script>
+        {% endblock %}
+        
+    </body>
+</html>

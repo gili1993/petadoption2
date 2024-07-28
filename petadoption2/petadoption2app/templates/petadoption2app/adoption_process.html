@@ -1,0 +1,58 @@
+{% extends 'petadoption2app/base.html' %}
+{% load static %}
+
+{% block title %}Adoption Process{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Adoption Process</h1>
+    
+    <section class="eligibility-requirements">
+        <h2>Eligibility Requirements</h2>
+        <p>Before adopting a pet, please ensure you meet the following requirements:</p>
+        <ul>
+            <li>Must be at least 21 years old.</li>
+            <li>Have a valid government-issued ID.</li>
+            <li>Provide proof of current residence (rental agreement or mortgage statement).</li>
+            <li>Consent from all household members for the adoption.</li>
+            <li>Ability to provide a stable and loving home environment.</li>
+        </ul>
+    </section>
+
+    <section class="application-process">
+        <h2>Application Process</h2>
+        <p>Follow these steps to adopt a pet:</p>
+        <ol>
+            <li><strong>Browse Available Pets:</strong> Visit our <a href="{% url 'available_pets' %}">Available Pets</a> page to view pets currently up for adoption.</li>
+            <li><strong>Fill Out an Application:</strong> Complete our online <a href="{% url 'adoption_application' %}">Adoption Application</a> form with your details.</li>
+            <li><strong>Initial Review:</strong> Our team will review your application and may contact you for additional information.</li>
+            <li><strong>Meet and Greet:</strong> If your application is approved, we will schedule a meet-and-greet session with the pet.</li>
+            <li><strong>Home Visit:</strong> A home visit may be conducted to ensure a safe and suitable environment for the pet.</li>
+            <li><strong>Finalize Adoption:</strong> Once all steps are completed, you can finalize the adoption by signing the adoption agreement and paying the adoption fee.</li>
+        </ol>
+    </section>
+    
+    <section class="adoption-fees">
+        <h2>Adoption Fees</h2>
+        <p>Our adoption fees help cover the costs of veterinary care, food, and shelter for the pets. The fees are as follows:</p>
+        <ul>
+            <li><strong>Dogs:</strong> $150 - $300</li>
+            <li><strong>Cats:</strong> $75 - $150</li>
+            <li><strong>Small Animals:</strong> $25 - $75</li>
+            <li><strong>Senior Pets (7+ years):</strong> $50</li>
+        </ul>
+        <p>All adopted pets come vaccinated, microchipped, and spayed/neutered.</p>
+    </section>
+    
+    <section class="post-adoption-support">
+        <h2>Post-Adoption Support</h2>
+        <p>We offer post-adoption support to ensure a smooth transition for both you and your new pet. Our services include:</p>
+        <ul>
+            <li>Behavioral advice and training resources.</li>
+            <li>Health and wellness tips.</li>
+            <li>Access to our veterinary partners for ongoing care.</li>
+            <li>24/7 helpline for any urgent concerns.</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

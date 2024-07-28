@@ -1,0 +1,91 @@
+{% extends 'petadoption2app/base.html' %}
+{% load static %}
+
+{% block title %}Resources{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Resources</h1>
+    <p>Here you will find helpful information, tips, and links for pet owners and those considering adoption.</p>
+    
+    <section class="pet-care-tips">
+        <h2>Pet Care Tips</h2>
+        <ul>
+            <li><a href="https://www.aspca.org/pet-care/dog-care/general-dog-care" target="_blank">General Dog Care</a></li>
+            <li><a href="https://www.aspca.org/pet-care/cat-care/general-cat-care" target="_blank">General Cat Care</a></li>
+            <li><a href="https://www.aspca.org/pet-care/small-pet-care" target="_blank">Small Pet Care</a></li>
+            <li><a href="https://www.aspca.org/pet-care/horse-care/general-horse-care" target="_blank">Horse Care</a></li>
+        </ul>
+    </section>
+    
+    <section class="adoption-tips">
+        <h2>Adoption Tips</h2>
+        <ul>
+            <li><a href="https://www.humanesociety.org/resources/adopting-pet" target="_blank">Adopting a Pet</a></li>
+            <li><a href="https://www.petfinder.com/pet-adoption/dog-adoption/adopting-a-dog/" target="_blank">Adopting a Dog</a></li>
+            <li><a href="https://www.petfinder.com/pet-adoption/cat-adoption/adopting-a-cat/" target="_blank">Adopting a Cat</a></li>
+            <li><a href="https://www.petfinder.com/pet-adoption/rabbit-adoption/adopting-a-rabbit/" target="_blank">Adopting a Rabbit</a></li>
+        </ul>
+    </section>
+    
+    <section class="healthcare-resources">
+        <h2>Healthcare Resources</h2>
+        <ul>
+            <li><a href="https://www.avma.org/resources/pet-owners/petcare/my-pets-wellness" target="_blank">Pet Wellness</a></li>
+            <li><a href="https://www.aspca.org/pet-care/general-pet-care/common-dog-diseases" target="_blank">Common Dog Diseases</a></li>
+            <li><a href="https://www.aspca.org/pet-care/general-pet-care/common-cat-diseases" target="_blank">Common Cat Diseases</a></li>
+            <li><a href="https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations-your-pet" target="_blank">Pet Vaccinations</a></li>
+        </ul>
+    </section>
+    
+    <section class="training-resources">
+        <h2>Training Resources</h2>
+        <ul>
+            <li><a href="https://www.akc.org/expert-advice/training/basic-training/" target="_blank">Basic Dog Training</a></li>
+            <li><a href="https://www.petfinder.com/dogs/dog-training/" target="_blank">Dog Training Tips</a></li>
+            <li><a href="https://www.humanesociety.org/resources/cat-training" target="_blank">Cat Training</a></li>
+            <li><a href="https://www.petfinder.com/cats/cat-training/" target="_blank">Cat Training Tips</a></li>
+        </ul>
+    </section>
+    
+    <section class="emergency-resources">
+        <h2>Emergency Resources</h2>
+        <ul>
+            <li><a href="https://www.aspca.org/pet-care/general-pet-care/emergency-care-your-pet" target="_blank">Emergency Care for Your Pet</a></li>
+            <li><a href="https://www.avma.org/resources/pet-owners/petcare/pets-and-disasters" target="_blank">Pets and Disasters</a></li>
+            <li><a href="https://www.avma.org/resources/pet-owners/petcare/first-aid-tips-pet-owners" target="_blank">First Aid Tips for Pet Owners</a></li>
+        </ul>
+    </section>
+</div>
+
+<style>
+    .content-container {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .content-container h1, .content-container h2 {
+        color: #2c3e50;
+    }
+    .content-container p, .content-container ul {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .content-container ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .content-container li {
+        margin-bottom: 10px;
+    }
+    .content-container a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    .content-container a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}

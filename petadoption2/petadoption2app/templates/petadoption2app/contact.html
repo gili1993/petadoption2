@@ -1,0 +1,60 @@
+{% extends 'petadoption2app/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or would like to learn more about our organization, please fill out the form below or use the contact information provided.</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+    
+    <section class="additional-contact-info">
+        <h2>Additional Contact Information</h2>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Email:</strong> contact@petadoptioncenter.com</p>
+        <p><strong>Address:</strong> 123 Pet Lane, Animal City, AC 12345</p>
+    </section>
+</div>
+
+<style>
+    .content-container {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .content-container h1 {
+        color: #2c3e50;
+        text-align: center;
+    }
+    .content-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content-container button {
+        align-self: center;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .content-container button:hover {
+        background-color: #2980b9;
+    }
+    .additional-contact-info {
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
